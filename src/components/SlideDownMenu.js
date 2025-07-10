@@ -1,18 +1,13 @@
 import OrderButton from './OrderButton.js';
+import NavList from './NavList.js';
 
 function SlideDownMenu() {
 
     const slideDownMenu = document.createElement('div');
     slideDownMenu.classList.add('slide-down-menu');
 
-    const slideDownMenuNav = document.createElement('ul');
-    const menuItems = ['Главная', 'Каталог', 'Блог', 'Отзывы', 'Контакты'];
-    menuItems.forEach(item => {
-        const menuItem = document.createElement('li');
-        menuItem.textContent = item;
-        slideDownMenuNav.appendChild(menuItem);
-    });
-    slideDownMenu.appendChild(slideDownMenuNav);
+    const navList = NavList();
+    slideDownMenu.appendChild(navList);
 
     const orderButton = OrderButton();
 

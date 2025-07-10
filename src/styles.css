@@ -160,7 +160,7 @@ header {
     transform: translateY(0);
 }
 
-.slide-down-menu ul {
+.nav-list {
     list-style: none;
     padding: 0;
     margin-top: 2.6em;
@@ -171,7 +171,7 @@ header {
     gap: 1.6em;
 }
 
-.slide-down-menu ul > li:hover {
+.nav-list > li:hover {
     text-decoration: underline;
     cursor: pointer;
 }
