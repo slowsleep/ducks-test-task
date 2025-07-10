@@ -12,16 +12,27 @@ function MainSection() {
     const button = document.createElement('button');
     button.className = 'button button-secondary';
     button.textContent = 'Смотреть уточек';
-    
+
     // картинка
     const image = document.createElement('img');
     image.className = 'main-image';
-    // в зависимости от ширины экрана выдавать маленьку или большую картинку
-    if (window.innerWidth < 375) {
-        image.src = '/src/assets/duck-small.png';
-    } else {
-        image.src = '/src/assets/duck-big.png';
+
+    const changeImageSrc = () => {
+        if (window.innerWidth >= 1280) {
+            image.src = '/src/assets/duck-big.png';
+        } else if (window.innerWidth <= 960 && window.innerWidth > 375) {
+            image.src = '/src/assets/duck-medium.png';
+        } else {
+            image.src = '/src/assets/duck-small.png';
+        }
     }
+
+    // в зависимости от ширины экрана выдавать маленьку или большую картинку
+    changeImageSrc();
+
+    // и слушатель события изменения размера окна добавляем для изменение картинки
+    window.addEventListener('resize', changeImageSrc);
+
     image.alt = 'Main duck image';
 
     // список услуг
