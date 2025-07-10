@@ -2,8 +2,38 @@ function MainSection() {
     // заголовок
     const container = document.createElement('main');
     const heading = document.createElement('h1');
-    heading.textContent = 'много уточек'.toUpperCase();
+
+    if (window.innerWidth < 1280) {
+        heading.textContent = 'много уточек'.toUpperCase();
+    } else {
+        heading.textContent = 'много'.toUpperCase();
+    }
+
     heading.className = 'main-heading';
+    container.appendChild(heading);
+
+    if (window.innerWidth >= 1280) {
+        const headingSecond = document.createElement('h1');
+        headingSecond.textContent = 'уточек'.toUpperCase();
+        headingSecond.className = 'main-heading-second';
+        container.appendChild(headingSecond);
+    }
+
+    window.addEventListener('resize', () => {
+        // если ширина меньше 1280 и есть "уточек", то удаляем "уточек" и меняем текст заголовка на "много уточек"
+        // иначе, если ширина больше или равна 1280 и нет "уточек", то добавляем "много" и "уточек"
+        if (window.innerWidth < 1280 && container.contains(document.querySelector('.main-heading-second'))) {
+            container.removeChild(document.querySelector('.main-heading-second'));
+            heading.textContent = 'много уточек'.toUpperCase();
+        } else if (window.innerWidth >= 1280 && !container.contains(document.querySelector('.main-heading-second'))) {
+            heading.textContent = 'много'.toUpperCase();
+            const headingSecond = document.createElement('h1');
+            headingSecond.textContent = 'уточек'.toUpperCase();
+            headingSecond.className = 'main-heading-second';
+            heading.insertAdjacentElement('afterend', headingSecond);
+        }
+    });
+
     // текст
     const text = document.createElement('p');
     text.className = 'main-text';
@@ -45,7 +75,6 @@ function MainSection() {
         servicesList.appendChild(listItem);
     });
 
-    container.appendChild(heading);
     container.appendChild(text);
     container.appendChild(button);
     container.appendChild(image);
