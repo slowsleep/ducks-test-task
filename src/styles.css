@@ -116,18 +116,18 @@ header {
 
 .main-image {
     width: 100%;
-    margin-top: -4.5em;
-    margin-left: 9.8em;
-    margin-bottom: -9.9em;
+    position: absolute;
+    top: 39%;
+    left: 43%;
 }
 
 .services-list {
     list-style: url('/src/assets/arrow.svg');
     display: flex;
     flex-direction: column;
-    gap: 1.55em;
-    margin-left: .5em;
-    margin-top: .7em;
+    gap: 1.5em;
+    margin-left: .4em;
+    margin-top: 8.5em;
 }
 
 .services-list li {
@@ -201,10 +201,11 @@ header {
         margin-left: .1em;
         margin-bottom: .24em;
         line-height: 80%;
+        width: 5em;
     }
 
     .main-text {
-        width: 35%;
+        width: 20em;
     }
 
     main > .button.button-secondary {
@@ -216,10 +217,9 @@ header {
     }
 
     .main-image {
-        position: absolute;
-        width: 65%;
-        top: .8em;
-        left: 46%;
+        width: 39em;
+        top: -12%;
+        left: 62.5%;
     }
 
     .services-list {
@@ -237,4 +237,40 @@ header {
         margin: 0 0 0 -1em;
     }
 
+}
+
+@media only screen and (min-width: 1280px) {
+    .main-heading {
+        margin-top: .65em;
+    }
+
+    .main-heading-second {
+        font-family: 'Jura', sans-serif;
+        font-weight: 700;
+        font-size: 152px;
+        margin: -.65em 0 0 4.7em;
+    }
+
+    .main-text {
+        width: 20em;
+        margin-top: -.3em;
+        margin-left: 53.3em;
+    }
+
+    main > .button.button-secondary {
+        margin-top: .45em;
+        margin-left: 56.85em;
+    }
+
+    .main-image {
+        width: 41.5em;
+        top: -2.5em;
+        left: 17.5em;
+    }
+
+    .services-list {
+        margin-top: 12.15em;
+        margin-left: 8.4em;
+        gap: 4.86em;
+    }
 }
