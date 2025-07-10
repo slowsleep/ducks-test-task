@@ -273,4 +273,15 @@ header {
         margin-left: 8.4em;
         gap: 4.86em;
     }
+
+    .nav-list {
+        font-size: 14px;
+        flex-direction: row;
+        gap: 1.5em;
+        margin: 0 0 0 6.5em;
+    }
+
+    .slide-down-menu {
+        display: none;
+    }
 }
