@@ -123,6 +123,7 @@ main {
     position: relative;
     left: 43%;
     margin-top: -4.8em;
+    pointer-events: none;
 }
 
 .services-list {
