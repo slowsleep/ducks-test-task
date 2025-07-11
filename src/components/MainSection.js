@@ -48,12 +48,12 @@ function MainSection() {
     image.className = 'main-image';
 
     const changeImageSrc = () => {
-        if (window.innerWidth >= 1280) {
-            image.src = '/src/assets/duck-big.png';
-        } else if (window.innerWidth <= 960 && window.innerWidth > 375) {
+        if (window.innerWidth < 960) {
+            image.src = '/src/assets/duck-small.png';
+        } else if (window.innerWidth < 1280) {
             image.src = '/src/assets/duck-medium.png';
         } else {
-            image.src = '/src/assets/duck-small.png';
+            image.src = '/src/assets/duck-big.png';
         }
     }
 
