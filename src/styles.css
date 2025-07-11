@@ -76,6 +76,7 @@ main {
 
 .basket-button {
     color: rgba(107, 114, 128, 1);
+    border: 1px solid transparent;
 }
 .basket-button:hover {
     color: rgba(37, 129, 235, 1);
