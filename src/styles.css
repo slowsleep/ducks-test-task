@@ -138,6 +138,12 @@ main {
     padding-left: .5em;
 }
 
+.services-list li:hover {
+    color: #2581EB;
+    cursor: pointer;
+    filter: brightness(0) saturate(100%) invert(39%) sepia(90%) saturate(1555%) hue-rotate(194deg) brightness(93%) contrast(101%);
+}
+
 .hidden {
     display: none;
 }
