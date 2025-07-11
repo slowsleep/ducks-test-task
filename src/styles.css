@@ -193,6 +193,69 @@ header {
     z-index: 99;
 }
 
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    width: 26.9%;
+    height: 39.5%;
+    border-radius: 20px;
+}
+
+.popup__close-button {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.popup__form {
+    display: flex;
+    flex-direction: column;
+    gap: .6em;
+    margin-top: .2em;
+}
+
+.popup__form__label-input {
+    display: flex;
+    flex-direction: column;
+    gap: .2em;
+}
+
+.popup__form > .popup__form__label-input input {
+    padding: 1em;
+    border: 1px solid rgba(241, 241, 241, 1);
+    border-radius: 14px;
+}
+
+.popup__form > .popup__form__label-input:nth-child(2) input {
+    padding: 1em 1em 1em 1.5em;
+}
+
+.popup__form > button {
+    width: 100%;
+    margin: 0;
+}
+
+.popup p {
+    font-size: 14px;
+    margin-top: 1.7em;
+    line-height: 22px;
+}
+
+.popup p a {
+    color: rgba(37, 129, 235, 1);
+    text-decoration: none;
+}
+
 @media only screen and (min-width: 960px) {
     header {
         margin-top: 1.2em;

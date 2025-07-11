@@ -2,6 +2,7 @@ import Header from './components/Header.js';
 import MainSection from './components/MainSection.js';
 import SlideDownMenu from './components/SlideDownMenu.js';
 import getAbsoluteHeight from './helpers/getAbsoluteHeight.js';
+import FormPopUp from './components/FormPopUp.js';
 
 function App() {
     const fragment = document.createDocumentFragment();
@@ -9,8 +10,9 @@ function App() {
     const overlay = document.createElement('div');
     overlay.classList.add('overlay', 'hidden');
 
-    const slideDownMenu = SlideDownMenu();
-    const header = Header(overlay, slideDownMenu);
+    const formPopUp = FormPopUp(overlay);
+    const slideDownMenu = SlideDownMenu(formPopUp);
+    const header = Header(overlay, slideDownMenu, formPopUp);
 
     header.appendChild(slideDownMenu);
     fragment.appendChild(header);
@@ -18,6 +20,8 @@ function App() {
 
     const mainSection = MainSection();
     fragment.appendChild(mainSection);
+
+    fragment.appendChild(formPopUp);
 
     // Устанавливаем высоту header после добавления в DOM
     setTimeout(() => {

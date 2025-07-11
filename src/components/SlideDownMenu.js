@@ -1,7 +1,7 @@
 import OrderButton from './OrderButton.js';
 import NavList from './NavList.js';
 
-function SlideDownMenu() {
+function SlideDownMenu(formPopUp) {
 
     const slideDownMenu = document.createElement('div');
     slideDownMenu.classList.add('slide-down-menu');
@@ -9,7 +9,7 @@ function SlideDownMenu() {
     const navList = NavList();
     slideDownMenu.appendChild(navList);
 
-    const orderButton = OrderButton();
+    const orderButton = OrderButton(slideDownMenu, formPopUp);
 
     // если ширина экрана больше 960, то убираем кнопку из меню
     // если меньше 960, то добавляем кнопку в меню

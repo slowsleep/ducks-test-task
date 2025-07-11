@@ -1,7 +1,7 @@
 import OrderButton from './OrderButton.js';
 import NavList from './NavList.js';
 
-function Header(overlay, slideDownMenu) {
+function Header(overlay, slideDownMenu, formPopUp) {
     const header = document.createElement('header');
     const headerContent = document.createElement('div');
 
@@ -27,7 +27,7 @@ function Header(overlay, slideDownMenu) {
     basketButton.innerHTML = `<img src="/src/assets/shopping-basket.svg" alt="Basket Icon">`;
     buttonContainer.appendChild(basketButton);
 
-    const orderButton = OrderButton();
+    const orderButton = OrderButton(slideDownMenu, formPopUp);
 
     // добавляем кнопку OrderButton в buttonContainer после basketButton, но перед menuButton
     // если ширина экрана >= 960px, то добавляем кнопку OrderButton в buttonContainer
