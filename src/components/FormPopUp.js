@@ -51,8 +51,6 @@ function FormPopUp(overlay) {
 
     closeButton.addEventListener('click', () => {
         popUp.classList.add('hidden');
-        console.log('скрытие overlay');
-        console.log(overlay);
         overlay.classList.add('hidden');
     });
 
