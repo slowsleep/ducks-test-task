@@ -207,8 +207,8 @@ main {
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 100;
-    width: 26.9%;
-    height: 39.5%;
+    width: 344px;
+    height: 320px;
     border-radius: 20px;
 }
 
@@ -353,5 +353,19 @@ main {
 
     .slide-down-menu {
         display: none;
+    }
+
+    .popup {
+        padding: 2.5em;
+        width: 417px;
+        height: 360px;
+    }
+
+    .popup__form__label-input {
+        gap: .1em;
+    }
+
+    .popup > p {
+        margin-top: 1.5em;
     }
 }
