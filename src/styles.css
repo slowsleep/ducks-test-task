@@ -240,6 +240,12 @@ main {
     border-radius: 14px;
 }
 
+.popup__form > .popup__form__label-input label:after {
+    content: '*';
+    color: rgba(255, 108, 45, 1);
+    margin-left: 4px;
+}
+
 .popup__form > .popup__form__label-input:nth-child(2) input {
     padding: 1em 1em 1em 1.5em;
 }
