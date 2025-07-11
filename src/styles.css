@@ -173,6 +173,9 @@ header {
 
 .nav-list > li:hover {
     text-decoration: underline;
+    text-underline-offset: 12px;
+    text-decoration-thickness: 2px;
+    color: #2581EB;
     cursor: pointer;
 }
 
