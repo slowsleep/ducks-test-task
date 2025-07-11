@@ -80,10 +80,12 @@ main {
 .basket-button:hover {
     color: rgba(37, 129, 235, 1);
     border: 1px solid rgba(37, 129, 235, 1);
+    filter: brightness(0) saturate(100%) invert(39%) sepia(90%) saturate(1555%) hue-rotate(194deg) brightness(93%) contrast(101%);
 }
 .basket-button:active {
     color: rgba(7, 99, 205, 1);
     border: 1px solid rgba(7, 99, 205, 1);
+    filter: brightness(0) saturate(100%) invert(16%) sepia(99%) saturate(3743%) hue-rotate(209deg) brightness(91%) contrast(101%);
 }
 
 .burger-button {
@@ -95,6 +97,9 @@ main {
 .burger-button:active {
     background-color: rgba(234, 179, 8, 1);
     color: white;
+}
+.burger-button:active img {
+    filter: brightness(0) invert(1);
 }
 
 
