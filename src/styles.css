@@ -188,9 +188,23 @@ main {
 }
 
 .nav-list > li:hover {
+    color: #2581EB;
+    cursor: pointer;
+}
+
+.nav-list > li > a.active {
+    color: #2581EB;
     text-decoration: underline;
     text-underline-offset: 12px;
     text-decoration-thickness: 2px;
+}
+
+.nav-list > li > a {
+    text-decoration: none;
+    color: rgba(31, 41, 55, 1);
+}
+
+.nav-list > li > a:hover {
     color: #2581EB;
     cursor: pointer;
 }

@@ -15,12 +15,40 @@ function NavList() {
 
     navItems.forEach(item => {
         const menuItem = document.createElement('li');
-        menuItem.textContent = item;
+        const link = document.createElement('a');
+        link.href = '#';
+        link.textContent = item;
+
+        if (item === 'Главная') {
+            link.classList.add('active');
+        }
+
+        menuItem.appendChild(link);
+
         if (item === 'Каталог' && window.innerWidth >= 1280) {
             addDownArrow(menuItem);
         }
+
         navList.appendChild(menuItem);
     });
+
+    setTimeout(() => {
+        document.querySelectorAll(".nav-list > li > a").forEach((link) => {
+            if (link.getAttribute('href') === window.location.hash) {
+                link.classList.add("active");
+            }
+
+            link.addEventListener('click', function(e) {
+                // удаляем активный класс у всех ссылок
+                document.querySelectorAll(".nav-list > li > a").forEach(a => {
+                    a.classList.remove("active");
+                });
+                // добавляем класс к текущей ссылке
+                this.classList.add("active");
+            });
+        });
+    }, 1000);
+
 
     window.addEventListener('resize', () => {
         // если ширина экрана меньше 1280 - Каталог
